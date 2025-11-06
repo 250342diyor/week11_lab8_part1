@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void reverseArray(int arr[], int start, int end) { // end = 9
+    int rev[end+1];
+    for (int i=start; i<= end; i++) {
+        rev[i] = arr[end-i];
+        cout << rev[i] << " ";
+    }
+}
+int main() {
+    int n;
+    cout << "Input: n=";
+    cin >> n; // n=10
+    int a[n];
+    for (int i = 0; i<n; i++)
+        cin >> a[i];
+    reverseArray(a,0, n-1);
+
+    return 0;
+}
