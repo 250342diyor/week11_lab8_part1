@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    char arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    int ucase = 0,lcase = 0, digit = 0, special = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i]>=65 && arr[i]<=90) {
+            ucase++;
+        }else if (arr[i]>=97 && arr[i]<=122) {
+            lcase++;
+        }else if (arr[i]>=48 && arr[i]<=57) {
+            digit++;
+        }else {
+            special++;
+        }
+    }
+    cout <<"Uppercase:"<< ucase <<endl<<"Lowercase: "<< lcase << endl <<"Digit: "<< digit << endl <<"Special: "<< special << endl;
+}
