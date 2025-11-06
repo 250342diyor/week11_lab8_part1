@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+bool strictlyEqual(const int list1[], const int list2[], int size) {
+    for (int i = 0; i < size; i++) {
+        if (list1[i] != list2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+int main() {
+    int n1,n2;
+    cout << "Enter number of elements for first array: ";
+    cin >> n1;
+    int list1[n1];
+    for (int i = 0; i < n1; i++) {
+        cout<<"Enter element "<<i+1<<": ";
+        cin >> list1[i];
+
+    }
+    cout << "Enter number of elements for second array: ";
+    cin >> n2;
+    int list2[n2];
+    for (int i = 0; i < n2; i++) {
+        cout<<"Enter element "<<i+1<<": ";
+        cin >> list2[i];
+    }
+    if (n1!=n2) {
+        cout<<"The two arrays are not strictly identical (lenghts)"<<endl;
+    }else if (strictlyEqual(list1,list2,n1)) {
+        cout<<"The two arrays are strictly identical"<<endl;
+    }else {
+        cout<<"The two arrays are not strictly identical"<<endl;
+    }
+    return 0;
+}
